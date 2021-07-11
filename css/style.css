@@ -286,6 +286,10 @@ button.small {
   --blockquoteBackground: var(--darkGrey);
 }
 
+.oled {
+  --black: #000;
+}
+
 .theme {
   /* Define colors as colors */
   --green: #4fc4cf;
