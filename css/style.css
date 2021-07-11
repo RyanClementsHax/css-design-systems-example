@@ -9,6 +9,7 @@
   --darkBlue: #00214d;
   --grey: #bfbfbf;
   --lightGrey: #f2f4f6;
+  --darkGrey: #222;
   --white: white;
 
   /* Define colors as intentions */
@@ -16,7 +17,11 @@
   --danger: var(--red);
   --background: var(--lightGrey);
   --cardBg: var(--white);
+  --headerBackground: var(--darkBlue);
+  --footerBackground: var(--black);
+  --blockquoteBackground: var(--white);
   --textColor: var(--black);
+  --buttonTextColor: var(--textColor);
   --lineColor: var(--grey);
 
   /* Styles */
@@ -62,7 +67,6 @@ body {
 }
 
 header {
-  --headerBackground: var(--darkBlue);
   color: var(--white);
   height: var(--headerHeight);
   background: var(--headerBackground);
@@ -89,7 +93,7 @@ header nav a + a {
 footer {
   --footerTextColor: var(--lightGrey);
   color: var(--footerTextColor);
-  background: var(--black);
+  background: var(--footerBackground);
   padding: 2rem var(--containerPadding);
   text-align: center;
 }
@@ -109,7 +113,7 @@ p {
 }
 
 p a, blockquote a {
-  color: var(--black);
+  color: var(--textColor);
   text-decoration: none;
   border-bottom: solid 2px var(--primary);
 }
@@ -136,15 +140,10 @@ h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: var(--smallText);}
 
-.dark {
-  --background: var(--black);
-  --textColor: var(--lightGrey);
-}
-
 blockquote {
   margin: 10px;
   padding: 2em;
-  background: var(--white);
+  background: var(--blockquoteBackground);
   box-shadow: var(--level-3);
 }
 
@@ -180,7 +179,7 @@ button {
   --buttonColor: var(--primary);
   
   appearance: none;
-  color: var(--textColor);
+  color: var(--buttonTextColor);
   background-color: var(--buttonColor);
   border: none;
   border-radius: 10px;
@@ -275,4 +274,14 @@ button.small {
 
 .card > *:last-child {
   margin-bottom: 0;
+}
+
+.dark {
+  --cardBg: var(--darkGrey);
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+  --headerBackground: var(--darkGrey);
+  --buttonTextColor: var(--black);
+  --footerBackground: var(--darkGrey);
+  --blockquoteBackground: var(--darkGrey);
 }
